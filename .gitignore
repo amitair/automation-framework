@@ -1,0 +1,15 @@
+
+# Dependency directories
+node_modules/
+
+# Optional npm cache directory
+.npm
+
+# dotenv environment variables file
+.env
+.env.test 
+
+# the local files should not be uploaded to repo as they contain secrets
+# pushing      up in this case as there are no real secrets
+# *.local 
+
