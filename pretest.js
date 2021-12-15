@@ -8,7 +8,7 @@ require("dotenv-flow").config({
 const uuid = uuidv4();
 const date = require("date-fns");
 const testRunStart = date.format(new Date(), "yyyy-MM-dd'T'HH:mm:ss'Z'");
-// const fse = require("fs-extra");
+const fse = require("fs-extra");
 
 console.log("test-session-uuid: ", uuid);
 console.log("test-session-local-time-stamp", testRunStart);
@@ -43,14 +43,13 @@ console.log("ENV: ", process.env.NODE_ENV);
 // }
 
 // use anonymous self invoking function in order to write any tokens we need into a json file
-// (async function () {
-//   const token = await getToken();
-//   const tokenFile = {
-//     role: (process.env.ROLE) ? process.env.ROLE.toUpperCase() : "OWNER",
-//     session_uuid: uuid,
-//     session_timeStamp: testRunStart,
-//     token: "Bearer " + token
-//   };
+(async function () {
+  //   const token = await getToken();
+  const tokenFile = {
+    session_uuid: uuid,
+    session_timeStamp: testRunStart
+    //     token: "Bearer " + token
+  };
 
-//   fse.writeJSON("API/helpers/testData/tokens/Token.json", sftJsonToken, { spaces: "\t" });
-// })();
+  fse.writeJSON("API/helpers/testData/tokens/token.json", tokenFile, { spaces: "\t" });
+})();
