@@ -1,0 +1,39 @@
+{
+  "env": {
+      "browser": true,
+      "es6": true
+  },
+  "extends": [
+      "standard"
+  ],
+  "globals": {
+      "Atomics": "readonly",
+      "SharedArrayBuffer": "readonly"
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module",
+      "allowImportExportEverywhere": true
+  },
+  "rules": {
+      "quotes": ["error", "double"],
+      "indent": ["error", 2,{ "SwitchCase": 1 }],
+      "prefer-const": ["error", {"destructuring": "any"}],
+      "semi": ["error", "always"],
+      "quote-props": ["error", "consistent"],
+      "dot-notation": ["off"],
+      "camelcase": ["off"],
+      "new-cap": ["off"],
+      "no-implicit-globals": ["off"],
+      "no-unused-vars": ["off"],
+      "space-before-function-paren": ["error", {
+          "anonymous": "always",
+          "named": "never"}]
+  },
+      
+  "overrides": [{
+      "files": ["./helpers/**/*.js", "./src/**/*.js"],
+      "excludedFiles": [".history/**/*","./node_modules/**/*", ".vscode/**/*"]
+  }]
+}

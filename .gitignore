@@ -1,3 +1,7 @@
+# Logs
+logs
+*.log
+npm-debug.log*
 
 # Dependency directories
 node_modules/
@@ -5,11 +9,19 @@ node_modules/
 # Optional npm cache directory
 .npm
 
-# dotenv environment variables file
-.env
-.env.test 
+# Optional eslint cache
+.eslintcache
 
-# the local files should not be uploaded to repo as they contain secrets
-# pushing      up in this case as there are no real secrets
-# *.local 
+# dotenv environment variables file
+.env.*.local
+.env
+.env.local
+
+# Vscode local history (and git)
+.history
+.git
+API/helpers/testData/finalFiles
+API/helpers/testData/tokens
+test_output
+.vscode/
 

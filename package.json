@@ -1,0 +1,66 @@
+{
+  "name": "automation-framework",
+  "version": "1.0.0",
+  "description": "automation framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "node -r esm pretest.js && ava --verbose",
+    "testAll": "node -r esm pretest.js && ava API\\src\\* --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amitair/automation-framework.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amitair/automation-framework/issues"
+  },
+  "homepage": "https://github.com/amitair/automation-framework#readme",
+  "dependencies": {
+    "cypress": "^9.1.1",
+    "ava": "^3.15.0",
+    "axios": "^0.23.0",
+    "delay": "^5.0.0",
+    "dotenv": "^10.0.0",
+    "dotenv-flow": "^3.2.0",
+    "esm": "^3.2.25",
+    "faker": "^5.5.3",
+    "ajv": "^8.6.2",
+    "babel-eslint": "^10.1.0",
+    "csvtojson": "^2.0.10",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.24.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "form-data": "^4.0.0",
+    "fs-extra": "^10.0.0",
+    "json2csv": "^5.0.6",
+    "json2xls": "^0.1.2",
+    "jsonpath": "^1.1.1",
+    "jsontocsv": "^0.3.0",
+    "knex": "^0.95.10",
+    "launchdarkly-node-server-sdk": "^6.2.0",
+    "moment-business-days": "^1.2.0",
+    "papaparse": "^5.3.1",
+    "pg": "^8.7.1",
+    "sequelize": "^6.6.5",
+    "xml2json": "^0.12.0",
+    "date-fns": "^2.23.0",
+    "moment": "^2.29.1",
+    "tap-parser": "^10.1.0",
+    "tap-xunit": "^2.4.1",
+    "uuid": "^8.3.2",
+    "xunit-viewer": "^7.1.5"
+  },
+  "ava": {
+    "require": [
+      "esm",
+      "./beforeAll"
+    ],
+    "concurrency": 1,
+    "timeout": "180s"
+  }
+}
