@@ -23,14 +23,3 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
-
-Cypress.Commands.add('loginUI', (username, password) => {
-  // THIS WILL NOT WORK AT PRESENT BECAUSE THE LOGIN PAGE IS SITTING AT AN IP ADDRESS AND THE APP IS AT LOCALHOST
-  // CYPRESS CAN'T VISIT TWO DIFFERENT SUPERDOMANS IN ONE TEST, SO FOR NOW, ALL LOGINS MUST HAPPEN VIA API
-  cy.visit(Cypress.env("LAUNCH_URL"));
-  cy.get('li a[href*="showlogin"]').first()
-    .click();
-  cy.get('#email').type(username);
-  cy.get('#password').type(password);
-  cy.get('button[class^="submit_btn"]').click();
-});

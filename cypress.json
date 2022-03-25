@@ -1,1 +1,7 @@
-{}
+{
+  "testFiles": "**/*.*",
+  "integrationFolder": "UI/cypress/integration",
+  "supportFile": "UI/cypress/support",
+  "fixturesFolder": "UI/cypress/fixtures",
+  "pluginsFile": "UI/cypress/plugins/index.js"
+}

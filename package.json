@@ -4,8 +4,11 @@
   "description": "automation framework",
   "main": "index.js",
   "scripts": {
-    "test": "node -r esm pretest.js && ava --verbose",
-    "testAll": "node -r esm pretest.js && ava API\\src\\* --verbose"
+    "test": " ava --verbose",
+    "testAll": "node -r esm pretest.js && ava API\\src\\* --verbose",
+    "cy:open": "cypress open ",
+    "cy:run": "cypress run --spec UI/cypress/integration/sample_spec.js",
+    "cy:open-dev": "cypress open --env TEST_ENV=dev"
   },
   "repository": {
     "type": "git",
@@ -18,23 +21,31 @@
   },
   "homepage": "https://github.com/amitair/automation-framework#readme",
   "dependencies": {
-    "cypress": "^9.1.1",
+    "@cypress/skip-test": "^2.6.0",
+    "ajv": "^8.6.2",
     "ava": "^3.15.0",
     "axios": "^0.23.0",
+    "babel-eslint": "^10.1.0",
+    "csvtojson": "^2.0.10",
+    "cypress-downloadfile": "^1.2.0",
+    "cypress-failed-log": "^2.9.1",
+    "cypress-file-upload": "^5.0.7",
+    "cypress-pipe": "^2.0.0",
+    "cypress-select-tests": "^1.7.1",
+    "cypress-wait-until": "^1.7.1",
+    "cypress-xpath": "^1.6.2",
+    "date-fns": "^2.23.0",
     "delay": "^5.0.0",
     "dotenv": "^10.0.0",
     "dotenv-flow": "^3.2.0",
-    "esm": "^3.2.25",
-    "faker": "^5.5.3",
-    "ajv": "^8.6.2",
-    "babel-eslint": "^10.1.0",
-    "csvtojson": "^2.0.10",
     "eslint": "^7.32.0",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "^2.24.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-standard": "^4.0.1",
+    "esm": "^3.2.25",
+    "faker": "^5.5.3",
     "form-data": "^4.0.0",
     "fs-extra": "^10.0.0",
     "json2csv": "^5.0.6",
@@ -43,16 +54,16 @@
     "jsontocsv": "^0.3.0",
     "knex": "^0.95.10",
     "launchdarkly-node-server-sdk": "^6.2.0",
+    "moment": "^2.29.1",
     "moment-business-days": "^1.2.0",
     "papaparse": "^5.3.1",
     "pg": "^8.7.1",
     "sequelize": "^6.6.5",
-    "xml2json": "^0.12.0",
-    "date-fns": "^2.23.0",
-    "moment": "^2.29.1",
     "tap-parser": "^10.1.0",
     "tap-xunit": "^2.4.1",
+    "typescript": "^4.3.2",
     "uuid": "^8.3.2",
+    "xml2json": "^0.12.0",
     "xunit-viewer": "^7.1.5"
   },
   "ava": {
@@ -62,5 +73,8 @@
     ],
     "concurrency": 1,
     "timeout": "180s"
+  },
+  "devDependencies": {
+    "cypress": "^9.2.0"
   }
 }

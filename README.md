@@ -7,3 +7,7 @@ This repository is based on a framework using Axios and AVA test runner and will
 1. run `NODE_ENV=<environment> npm run testAll` to run all tests in API/src directory
 1. run `NODE_ENV=<environment> npm test filepath` to run specific test
 
+
+## Instructions for running UI tests:
+1. create the .env.<environment>.local files in top level directory 
+1. run `npx cypress open`
