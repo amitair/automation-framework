@@ -9,5 +9,5 @@ This repository is based on a framework using Axios and AVA test runner and will
 
 
 ## Instructions for running UI tests:
-1. create the .env.<environment>.local files in top level directory 
+1. create the .env.< environment >.local files in top level directory 
 1. run `npx cypress open`
